@@ -29,6 +29,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 const postcssNormalize = require('postcss-normalize');
 const ExampleWebpackPlugin = require('./webpackPlugins/ExampleWebpackPlugin');
+const { cwd } = require('process');
 
 const appPackageJson = require(paths.appPackageJson);
 
@@ -326,6 +327,8 @@ module.exports = function (webpackEnv) {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
+        Entities: path.resolve(__dirname, '../src/entities'),
+        Mocks: path.resolve(__dirname, '../src/mocks'),
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
