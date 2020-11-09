@@ -1,5 +1,4 @@
-//@ts-ignore
-import { ESuits, EValues } from "Entities";
+import { ESuits, EValues } from "@entities";
 
 export type Card = {
   suit: ESuits;

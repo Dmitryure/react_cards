@@ -1,9 +1,7 @@
 import React from "react";
-//@ts-ignore
-import { aceOfClubs } from "Mocks";
+import { aceOfClubs } from "@mocks";
 
 function App() {
-  console.log(aceOfClubs)
   return <div>{aceOfClubs.suit}</div>;
 }
 

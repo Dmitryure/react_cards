@@ -1,2 +1,2 @@
-export * from './cardMock'
+export * from './Card'
 export * from './Enums'
